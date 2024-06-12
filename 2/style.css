@@ -1,0 +1,422 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222; /* Black background */
+  color: #ebe8e8; /* Golden yellow text */
+}
+
+.nav-toggle {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.menu {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #050505;
+  }
+
+  .nav-list li {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+}
+
+nav {
+  background-color: #050505; /* Dark gray background */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  position: fixed;
+  font-weight: bold;
+  box-shadow: 10px 10px 10px 10px  rgba(30, 29, 29, 0.4);
+}
+
+.nav-logo img {
+  width: 50px; /* Logo width */
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #BC9A6A; /* Golden yellow text */
+}
+
+ul>li>a:hover {
+  color: #c2760b;
+  font-size: 1.1em;
+   /* White text on hover */
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+#home {
+  text-align: center;
+  padding-top: 90px;
+  
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#home h1 p {
+  color: #fdc787;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Sesuaikan dengan kebutuhan */
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+section > h2 {
+  text-align: center;
+}
+
+#home p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+#produk ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#produk li {
+  width: calc(33.333% - 2rem); /* Three items per row with margin */
+  margin: 1rem;
+  background-color: #222; /* Dark gray background */
+  padding: 1rem;
+  border: 1px solid #ffd700; /* Golden yellow border */
+  border-radius: 20px;
+}
+
+#produk,#spesifikasi,#fitur, #layanan{
+  padding-top: 100px;
+}
+
+.banner{
+  width: auto;
+  background: linear-gradient(to right, #c2760b,#ffd700);
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px 50px 10px 50px;
+}
+
+#layanan{
+  display: flex;
+  justify-content: center;
+}
+
+#layanan h2 {
+  color: #e2dada; /* Warna teks untuk judul */
+  text-align: center; /* Pusatkan judul */
+  margin-bottom: 15px; /* Margin bawah untuk spacing */
+}
+
+#layanan p {
+  font-size: 16px; /* Ukuran font paragraf */
+  color:#f8f5f5; /* Warna teks paragraf */
+  text-align: center; /* Pusatkan teks */
+}
+
+#layanan ol {
+  background-color: #222; /* Latar belakang untuk list */
+  border-radius: 5px; /* Border radius untuk list */
+  padding: 15px; /* Padding dalam list */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Bayangan untuk list */
+}
+
+#layanan li {
+  font-size: 14px; /* Ukuran font untuk item list */
+  line-height: 1.6; /* Line height untuk readability */
+  border-bottom: 1px solid #050505; /* Garis bawah untuk setiap item */
+  padding: 8px; /* Padding untuk item */
+}
+
+#layanan li:last-child {
+  border-bottom: none; /* Hapus border pada item terakhir */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  #layanan {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  #layanan h2 {
+    font-size: 18px;
+  }
+
+  #layanan p, #layanan li {
+    font-size: 14px;
+  }
+}
+
+.slider{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide{
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#produk h3 {
+  font-size: 1.5rem;
+  color: #c2760b; /* Golden yellow text */
+}
+
+#produk p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: #c2760b; /* Golden yellow background */
+  color: #000; /* Black text */
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button>a{
+  color: #fff;
+}
+
+button:hover {
+  background-color: #e6c300; /* Golden yellow background on hover */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  width: calc(40% - 1px); /* adjust the width to fit your content */
+  margin: 10px;
+  background-color: #222;
+  padding: 20px;
+  border: 1px solid #ffd700;
+}
+
+.trans{
+  width: auto;
+  height: 30px;
+  background:linear-gradient(#222,#050505)
+}
+
+/* Gaya untuk footer */
+footer {
+  background-color: #050505; /* Warna latar belakang gelap */
+  color: #939191; /* Warna teks putih */
+  text-align: center; /* Teks rata tengah */
+  padding: 20px 10px; /* Padding atas-bawah dan kiri-kanan */
+  font-size: 14px; /* Ukuran font */
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Responsivitas untuk footer pada perangkat kecil */
+@media (max-width: 768px) {
+  footer {
+    padding: 15px 5px; /* Padding yang lebih kecil untuk layar kecil */
+    font-size: 12px; /* Ukuran font yang lebih kecil */
+  }
+}
+
+/* Mobile layout */
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  #produk ul {
+    flex-direction: column;
+  }
+
+  #produk li {
+    width: auto; /* Full width on smaller screens */
+  }
+
+  #deskripsi ul {
+    flex-direction: column;
+  }
+
+  #deskripsi li {
+    width: auto; /* Full width on smaller screens */
+  }
+
+}
+
+/* Gaya dasar untuk slider dan elemen produk */
+.slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+
+
+/* Responsivitas untuk elemen produk */
+@media (max-width: 768px) {
+  .banner h2, h3 {
+    font-size: 18px; /* Ukuran font yang lebih kecil untuk judul pada perangkat kecil */
+  }
+
+  .slider {
+    margin: 0 5px; /* Margin yang lebih kecil untuk slider */
+  }
+
+  .prev, .next {
+    font-size: 12px; /* Ukuran font yang lebih kecil untuk tombol */
+    padding: 5px; /* Padding yang lebih kecil */
+  }
+}
+
+/* Gaya tambahan untuk tombol dan tautan */
+button {
+  background:linear-gradient(to right,#c2760b,#ffd700);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
